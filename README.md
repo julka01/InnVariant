@@ -64,7 +64,4 @@ pip install requirements.txt
 ## Experiments Running Logs
 
 The logs of run experiments are on WandB.
-
--   Serveral reports are made are based on logs for a quick check, including [metric basic tests](https://wandb.ai//2077/metric_eval/reports/Metrics-Basic-Evaluation--Vmlldzo0MjczMDY1), [metric vs epochs(on models)](https://api.wandb.ai/links/2077/2m4egcgv), [metric vs regularize factor](https://wandb.ai//2077/innvariant-representations-eval/reports/Metrics-vs-Regularize-Factor-on-Models---Vmlldzo0NDA3MjI3) and [smoothness of each models](https://wandb.ai//2077/innvariant-representations-smoothness/reports/Smoothness-of-Each-Models--Vmlldzo0Nzk5NDI0).
-
--   These report are base on the running logs of [basic tests](https://wandb.ai/2077/metric_eval), [training models](https://wandb.ai/2077/innvariant-representations) (The models during training are saved in this WandB project, see `files` tab), [metrics evaluations on the trained models](https://wandb.ai/2077/innvariant-representations-eval), [measurements of smoothness](https://wandb.ai/2077/innvariant-representations-smoothness).
+Logs are removed at the moment to maintain anonymity. 
