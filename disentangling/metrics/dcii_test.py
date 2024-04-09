@@ -1,7 +1,7 @@
 import math
 
 from .utils import get_scores
-from .dcii import dcii
+from .edi import dcii
 
 
 def test_m0c0i0():

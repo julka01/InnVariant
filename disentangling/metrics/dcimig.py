@@ -35,7 +35,7 @@ def _dcimig_from_mutual_infos(mutual_infos: np.ndarray) -> np.ndarray:
 def dcimig(
     factors: np.ndarray,
     codes: np.ndarray,
-    estimator: str = "ksg",
+    estimator: str = "bins",
     discrete_factors: Union[List[bool], bool] = False,
     epsilon: float = 1e-10,
     **kwargs

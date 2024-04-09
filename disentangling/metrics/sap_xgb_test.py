@@ -1,7 +1,7 @@
 import math
 
 from .utils import get_scores
-from .sap import sap
+from .sap_xgb import sap
 
 
 def test_m0c0i0():

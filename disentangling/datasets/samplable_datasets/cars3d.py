@@ -40,4 +40,4 @@ def cars3d(data_path="./data", **kwargs):
     return get_selected_subsets(dataset, **kwargs)
 
 
-cars3d.shape = [3, 64, 64]
+cars3d.shape = [3, 128, 128]

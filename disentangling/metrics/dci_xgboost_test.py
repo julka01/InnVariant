@@ -1,7 +1,7 @@
 import math
 
 from .utils import get_scores
-from .dci import dci
+from .dci_xgboost import dci
 
 
 def test_m0c0i0():

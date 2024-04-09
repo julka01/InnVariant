@@ -98,10 +98,11 @@ if __name__ == "__main__":
 
     ## accept config from args
     args_config = Box()
+    args_config.data = base_config.data
     if args.seed is not None:
         args_config.seed = args.seed
     if args.dataset is not None:
-        args_config.dataset.name = args.dataset
+        args_config.data.name = args.dataset
     if args.metrics is not None:
         args_config.metrics = args.metrics
     if args.model_name is not None:

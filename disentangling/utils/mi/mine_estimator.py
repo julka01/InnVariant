@@ -165,7 +165,7 @@ def estimate_mutual_info(x, y, **kwargs):
         x = default_transform(x)
     if is_1d(y):
         y = default_transform(y)
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda:5" if torch.cuda.is_available() else "cpu")
     net = Net(input_shape=(x.shape[1] + y.shape[1]))
     net.to(device)
     mi = train_mine(net, data=(x, y), **kwargs)

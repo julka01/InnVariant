@@ -11,7 +11,7 @@ metrics:
         "dci",
         "dcimig",
         "modularity",
-        "dcii",
+        "edi",
     ]
 
 n_steps_log_every: 1600

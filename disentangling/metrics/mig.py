@@ -8,7 +8,7 @@ from disentangling.utils.mi import get_mutual_infos, get_entropies
 def mig(
     factors: np.ndarray,
     codes: np.ndarray,
-    estimator: str = "ksg",
+    estimator: str = "bins",
     discrete_factors: Union[List[bool], bool] = False,
     epsilon: float = 1e-10,
     **kwargs

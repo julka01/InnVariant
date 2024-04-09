@@ -125,7 +125,7 @@ def smoothness(
     return results
 
 
-from .dci import dci_collect_relationship
+from .dci_xgboost import dci_collect_relationship
 
 
 def corrcoef_for_pairs(x, y):

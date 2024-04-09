@@ -13,7 +13,7 @@ def estimate_mi_codes_and_factor(
     factor: np.ndarray,
     discrete_factor: bool = False,
     estimate_by: str = "mine",
-    estimator: str = "ksg",
+    estimator: str = "mine",
 ) -> float:
     """Calculate mutual infors between codes $c$ and factor $z_j$ I(c; z_j).
 
@@ -135,7 +135,7 @@ def _completeness(mutual_infos: np.ndarray) -> float:
     return np.sum(exclusive_rate(mutual_infos, axis=0)) / n_factors
 
 
-def dcii(
+def edi(
     factors: np.ndarray,
     codes: np.ndarray,
     discrete_factors: Union[List[bool], bool] = False,
@@ -143,7 +143,7 @@ def dcii(
     estimate_mi_codes_and_factor_by: str = "mine",
     epsilon: float = 1e-10,
 ) -> dict:
-    """Calculate DCII scores.
+    """Calculate DCII/EDI scores.
 
     Args:
         factors (np.ndarray): [Shape (batch_size, n_factors)] The real generative factors.
@@ -176,11 +176,15 @@ def dcii(
     d_score = _disentanglement(normalized_mutual_infos)
     c_score = _completeness(normalized_mutual_infos)
     i_score = dcii_i(factors, codes, epsilon=epsilon, estimator=estimator)
-    return dict(
-        disentanglement=d_score,
-        completeness=c_score,
-        informativeness=i_score,
-    )
+    d_score = np.clip(d_score, 0.0, 1.0)
+    c_score = np.clip(c_score, 0.0, 1.0)
+    i_score = np.clip(i_score, 0.0, 1.0)
+    return d_score, c_score, i_score
+    # #return dict(
+    #     disentanglement=d_score,
+    #     completeness=c_score,
+    #     informativeness=i_score,
+    # )
 
 
 def dcii_d(
@@ -292,8 +296,9 @@ def dcii_i(
     )
 
     entropies = get_entropies(
-        factors, estimator=estimator, discrete=discrete_factors
+        factors, estimator= 'mine', discrete=discrete_factors
     )
     captured[captured > entropies] = entropies[captured > entropies]
-    score = np.mean(captured / (entropies + epsilon))
+    score = np.mean(captured/ (entropies + epsilon))
+    #score = np.sum(captured / (entropies + epsilon))
     return score
