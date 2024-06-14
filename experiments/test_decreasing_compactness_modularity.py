@@ -42,16 +42,28 @@ densely_dotted = (0, (1, 1))
 PLOTS = {
 
     'FAMILIES': {
-        'Modularity or Explicitness-centric Metrics': ['Z-diff', 'Z-min Variance', 'EDI Mod', 'Modularity', 'EDI Expl','DCI Mod', 'DCI Expl'],
+        'Modularity-centric': ['Z-diff', 'Z-min Variance', 'EDI Mod', 'Modularity' ,'DCI Mod'],
 
-        'Compactness-centric Metrics': ['MIG', 'SAP', 'MIG-ksg', 'MIG-sup', 'MIG-sup-ksg', 'DCIMIG', 'DCIMIG-ksg', 'EDI Comp', 'DCI Comp']
+        'Compactness-centric': ['MIG', 'SAP', 'MIG-ksg', 'MIG-sup', 'MIG-sup-ksg', 'DCIMIG', 'DCIMIG-ksg', 'EDI Comp', 'DCI Comp'],
+        'Explicitness-centric': ['EDI Expl', 'DCI Expl', ]
     },
     'COLORS': ['blue', 'green', 'red', 'darkturquoise', 'magenta', 'orange', 'black', 'violet', 'indigo', 'gray', 'maroon'],
     'LINE STYLES': ['--', '-.', loosely_dashed, densely_dashdotdotted, ':', densely_dotted],
-    'LEGEND POSITIONS': [(0.5, -0.32), (0.5, -0.32)],
-    'NB LEGEND COLUMNS': [4, 4]
+    'LEGEND POSITIONS': [(0.5, -0.4), (0.5, -0.4), (0.5, -0.4)],
+    'NB LEGEND COLUMNS': [3, 3, 3]
 }
-
+# PLOTS = {
+#
+#      'FAMILIES': {
+#          'Metrics': ['Z-diff', 'Z-min Variance', 'EDI Mod', 'Modularity', 'EDI Expl','DCI Mod', 'DCI Expl', 'MIG', 'SAP', 'MIG-ksg', 'MIG-sup', 'MIG-sup-ksg', 'DCIMIG', 'DCIMIG-ksg', 'EDI Comp', 'DCI Comp'],
+#           'Compactness-centric Metrics': ['MIG', 'SAP', 'MIG-ksg', 'MIG-sup', 'MIG-sup-ksg', 'DCIMIG', 'DCIMIG-ksg', 'EDI Comp', 'DCI Comp']
+#
+#      },
+#      'COLORS': ['blue', 'green', 'red', 'darkturquoise', 'magenta', 'orange', 'black', 'violet', 'indigo', 'gray', 'maroon'],
+#      'LINE STYLES': ['--', '-.', loosely_dashed, densely_dashdotdotted, ':', densely_dotted],
+#      'LEGEND POSITIONS': [(0.5, -0.32), (0.5, -0.32)],
+#      'NB LEGEND COLUMNS': [4, 4]
+#  }
 
 def get_factors_codes_dataset(noise_level):
     ''' Create factors-codes dataset

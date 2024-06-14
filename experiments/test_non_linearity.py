@@ -42,14 +42,16 @@ densely_dotted = (0, (1, 1))
 PLOTS = {
 
     'FAMILIES': {
-        'Metrics computed without MI': [  'Z-diff', 'Z-min Variance', 'Modularity' , 'DCI Mod', 'DCI Comp',  'DCI Expl', 'SAP'],
+        'Predictor-based': [  'Z-diff', 'Z-min Variance', 'Modularity' , 'DCI Mod', 'DCI Comp',  'DCI Expl', 'SAP'],
 
-        'Metrics computed with MI': ['EDI Expl', 'EDI Comp', 'EDI Mod', 'MIG', 'MIG-ksg', 'DCIMIG-ksg', 'DCIMIG' , 'MIG-sup']
+        'MI with binning': [ 'MIG', 'DCIMIG-ksg', 'DCIMIG' , 'MIG-sup'],
+
+        'MI with improved estimator': ['EDI Expl', 'EDI Comp', 'EDI Mod', 'EDI Expl', 'MIG-ksg', 'DCIMIG-ksg']
     },
     'COLORS': ['blue', 'green', 'red', 'darkturquoise', 'orange', 'black', 'violet', 'indigo', 'gray', 'maroon'],
     'LINE STYLES': ['--', '-.', loosely_dashed, densely_dashdotdotted, ':', densely_dotted],
-    'LEGEND POSITIONS': [(0.5, -0.32), (0.5, -0.32)],
-    'NB LEGEND COLUMNS': [4, 4]
+    'LEGEND POSITIONS': [(0.5, -0.4), (0.5, -0.4), (0.5, -0.4)],
+    'NB LEGEND COLUMNS': [3, 3, 3]
 }
 
 

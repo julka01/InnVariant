@@ -8,7 +8,7 @@ from disentangling.metrics import (
     sap,
     modularity,
     dci,
-    dcii,
+    edi,
 )
 from disentangling.metrics.utils import get_scores
 
@@ -27,7 +27,7 @@ class Logger:
 
 
 def test_metrics(n_times):
-    metrics = [z_min_var, mig, mig_sup, dcimig, sap, modularity, dci, dcii]
+    metrics = [z_min_var, mig, mig_sup, dcimig, sap, modularity, dci, edi]
     cases = [
         [False, False, False],
         [False, False, True],

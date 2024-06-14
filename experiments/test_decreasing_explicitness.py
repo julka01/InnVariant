@@ -43,16 +43,16 @@ densely_dotted = (0, (1, 1))
 PLOTS = {
 
     'FAMILIES': {
-        'Metrics not measuring Explicitness': [ 'Z-diff', 'Z-min Variance', 'MIG-sup', 'EDI Mod', 'EDI Comp', 'DCI Mod', 'DCI Comp'],
+        'Modularity-centric': ['Z-diff', 'Z-min Variance', 'EDI Mod', 'Modularity' ,'DCI Mod'],
 
-        'Metrics measuring Explicitness': ['EDI Expl', 'DCI Expl', 'SAP', 'MIG', 'Modularity', 'DCIMIG' ]
+        'Compactness-centric': ['MIG', 'SAP', 'MIG-ksg', 'MIG-sup', 'MIG-sup-ksg', 'DCIMIG', 'DCIMIG-ksg', 'EDI Comp', 'DCI Comp'],
+        'Explicitness-centric': ['EDI Expl', 'DCI Expl', ]
     },
-        'COLORS': ['blue', 'green', 'red', 'darkturquoise', 'magenta', 'orange', 'black', 'violet', 'indigo', 'gray', 'maroon'],
+    'COLORS': ['blue', 'green', 'red', 'darkturquoise', 'magenta', 'orange', 'black', 'violet', 'indigo', 'gray', 'maroon'],
     'LINE STYLES': ['--', '-.', loosely_dashed, densely_dashdotdotted, ':', densely_dotted],
-    'LEGEND POSITIONS': [(0.5, -0.32), (0.5, -0.32)],
-    'NB LEGEND COLUMNS': [4, 4]
+    'LEGEND POSITIONS': [(0.5, -0.4), (0.5, -0.4), (0.5, -0.4)],
+    'NB LEGEND COLUMNS': [3, 3, 3]
 }
-
 
 
 def get_factors_codes_dataset(noise_level):

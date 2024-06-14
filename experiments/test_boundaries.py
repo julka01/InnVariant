@@ -10,7 +10,7 @@ from disentangling.metrics import (
     sap,
     modularity,
     dci,
-    dcii,
+    edi,
     mig_ksg
 )
 
@@ -119,8 +119,8 @@ def get_scores(
     return scores
 
 def test_metrics(n_times):
-    #metrics = [mig,  mig_sup, mig_ksg, modularity, sap, dcimig, z_min_var, dci, dcii]
-    metrics = [dcii]
+    metrics = [mig,  mig_sup, mig_ksg, modularity, sap, dcimig, z_min_var, dci, edi]
+    #metrics = []
     cases = [
         [False, False, False],
         [False, False, True],
