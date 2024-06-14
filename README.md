@@ -20,7 +20,7 @@ source .venv/bin/activate
 Install the requirements.
 
 ```shell
-pip install torch torchvision numpy scipy scikit-learn xgboost pyyaml python-box pillow pytest h5py wandb tqdm
+pip install torch torchvision numpy scipy scikit-learn xgboost pyyaml python-box pillow pytest h5py wandb tqdm pandas matplot
 ```
 
 or install with the recommended version.
@@ -50,7 +50,7 @@ pip install requirements.txt
 
 -   Simulation Tests
     ```shell
-    python experiments.test_non_linearity --run
+    python experiments.test_non_linearity run
     ```
 
 To plot the results --plot should be used in place of --run. Other flags control parameters like metrics to test (eg. --metrics)
